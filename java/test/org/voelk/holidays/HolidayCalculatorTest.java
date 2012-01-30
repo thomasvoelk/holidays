@@ -21,6 +21,7 @@ public class HolidayCalculatorTest {
     @Before
     public void setUp() throws Exception {
         calculator = new HolidayCalculator();
+        System.setProperty("de.jollyday.config", "singlethread_jollyday.properties");
     }
 
     @Test
