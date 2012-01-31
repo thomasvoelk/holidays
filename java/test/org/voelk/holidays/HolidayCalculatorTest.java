@@ -13,6 +13,8 @@ public class HolidayCalculatorTest {
     private static final LocalDate MONDAY_BOXING_DAY = new LocalDate(2011, 12, 26);
     private static final LocalDate CHRISTMAS_2011 = new LocalDate(2011, 12, 24);
     private static final LocalDate CHRISTMAS_2012 = new LocalDate(2012, 12, 24);
+    private static final LocalDate NEW_YEARS_EVE_2011 = new LocalDate(2011, 12, 31);
+    private static final LocalDate NEW_YEARS_EVE_2012 = new LocalDate(2012, 12, 31);
     private static final LocalDate BETWEEN_YEARS_START = new LocalDate(2011, 12, 19);
     private static final LocalDate BETWEEN_YEARS_END = new LocalDate(2012, 1, 8);
     private static final LocalDate JANUARY_1ST_2012 = new LocalDate(2012, 1, 1);
@@ -58,11 +60,15 @@ public class HolidayCalculatorTest {
     public void testHalfDayOnWeekend() throws Exception {
         HolidayPeriod period = new JodaHolidayPeriod(CHRISTMAS_2011, CHRISTMAS_2011);
         assertEquals(0.0, calculator.daysNeededFor(period));
+        period = new JodaHolidayPeriod(NEW_YEARS_EVE_2011, NEW_YEARS_EVE_2011);
+        assertEquals(0.0, calculator.daysNeededFor(period));
     }
 
     @Test
     public void testHalfDay() throws Exception {
         HolidayPeriod period = new JodaHolidayPeriod(CHRISTMAS_2012, CHRISTMAS_2012);
+        assertEquals(0.5, calculator.daysNeededFor(period));
+        period = new JodaHolidayPeriod(NEW_YEARS_EVE_2012, NEW_YEARS_EVE_2012);
         assertEquals(0.5, calculator.daysNeededFor(period));
     }
 

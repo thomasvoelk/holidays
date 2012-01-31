@@ -42,7 +42,7 @@ public class HolidayCalculator {
     }
 
     private boolean isNewYearsEve(LocalDate date) {
-        return date.getMonthOfYear() == 1 && date.getDayOfMonth() == 1;
+        return date.getMonthOfYear() == 12 && date.getDayOfMonth() == 31;
     }
 
     private boolean isWeekend(LocalDate test) {
