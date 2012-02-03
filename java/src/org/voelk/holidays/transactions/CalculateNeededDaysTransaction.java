@@ -9,8 +9,13 @@ public class CalculateNeededDaysTransaction implements Transaction<CalculateNeed
 
     private static final String BAVARIA = "by";
 
-    public CalculateNeededDaysResponse execute(CalculateNeededDaysRequest period) {
-        return new CalculateNeededDaysResponse(daysNeededFor(new LocalDate(period.getStartDate()), new LocalDate(period.getEndDate())));
+    public CalculateNeededDaysResponse execute(final CalculateNeededDaysRequest request) {
+        return new CalculateNeededDaysResponse() {
+            @Override
+            public double getDays() {
+                return daysNeededFor(new LocalDate(request.getStartDate()), new LocalDate(request.getEndDate()));
+            }
+        };
     }
 
     private double daysNeededFor(final LocalDate start, final LocalDate end) {
