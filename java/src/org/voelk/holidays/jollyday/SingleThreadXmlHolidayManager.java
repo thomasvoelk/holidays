@@ -1,4 +1,4 @@
-package org.voelk.holidays;
+package org.voelk.holidays.jollyday;
 
 import java.lang.reflect.Method;
 import java.util.*;

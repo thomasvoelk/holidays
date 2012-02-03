@@ -1,14 +1,16 @@
-package org.voelk.holidays;
+package org.voelk.holidays.transactions;
 
 import de.jollyday.*;
 import org.joda.time.*;
+import org.voelk.holidays.GregorianDateFactory;
+import org.voelk.holidays.Transaction;
 
-public class HolidayCalculator {
+public class CalculateNeededDaysTransaction implements Transaction<CalculateNeededDaysRequest, CalculateNeededDaysResponse> {
 
     private static final String BAVARIA = "by";
 
-    public double daysNeededFor(HolidayPeriod period) {
-        return daysNeededFor(new LocalDate(period.getStartDate()), new LocalDate(period.getEndDate()));
+    public CalculateNeededDaysResponse execute(CalculateNeededDaysRequest period) {
+        return new CalculateNeededDaysResponse(daysNeededFor(new LocalDate(period.getStartDate()), new LocalDate(period.getEndDate())));
     }
 
     private double daysNeededFor(final LocalDate start, final LocalDate end) {

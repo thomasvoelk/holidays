@@ -1,8 +1,9 @@
-package org.voelk.holidays;
+package org.voelk.holidays.learning;
 
 import de.jollyday.*;
 import org.joda.time.*;
 import org.junit.*;
+import org.voelk.holidays.GregorianDateFactory;
 
 import java.util.Set;
 

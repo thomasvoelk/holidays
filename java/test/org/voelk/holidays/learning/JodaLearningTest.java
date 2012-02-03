@@ -1,4 +1,4 @@
-package org.voelk.holidays;
+package org.voelk.holidays.learning;
 
 import org.joda.time.*;
 import org.joda.time.chrono.GregorianChronology;
