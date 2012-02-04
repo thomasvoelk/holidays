@@ -9,7 +9,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jollyday-0.4.5" level="project" />
-    <orderEntry type="library" name="JodaTime" level="project" />
+    <orderEntry type="library" name="JodaTime 2.0" level="project" />
     <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
