@@ -1,17 +1,17 @@
 package org.voelk.holidays.learning;
 
 import de.jollyday.*;
+import de.jollyday.util.*;
 import org.joda.time.*;
 import org.junit.*;
-import org.voelk.holidays.GregorianDateFactory;
 
-import java.util.Set;
+import java.util.*;
 
 import static junit.framework.Assert.assertEquals;
 
 public class JollydayLearningTests {
 
-    private static final LocalDate MONDAY_BOXING_DAY = GregorianDateFactory.create(2011, 12, 26);
+    private static final LocalDate MONDAY_BOXING_DAY = CalendarUtil.convertToGregorianDate(CalendarUtil.create(2011, 12, 26));
 
     @Test
     public void testGermany() throws Exception {
