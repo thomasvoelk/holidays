@@ -7,9 +7,9 @@ import java.util.*;
 
 import static junit.framework.Assert.assertEquals;
 
-public class HolidayCalculatorTest {
+public class JollydayHolidayCalculatorTest {
     public static final String JOLLYDAY_PROPERTIES_FILEPATH = "d:/development/projekte/holidays/java/test/singlethread_jollyday.properties";
-    private HolidayCalculator holidayCalculator = new HolidayCalculator();
+    private JollydayHolidayCalculator holidayCalculator = new JollydayHolidayCalculator();
     private static final Date THURSDAY = new LocalDate(2011, 9, 8).toDate();
     private static final Date FRIDAY = new LocalDate(2011, 9, 9).toDate();
     private static final Date MONDAY = new LocalDate(2011, 9, 12).toDate();
