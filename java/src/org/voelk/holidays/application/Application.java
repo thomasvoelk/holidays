@@ -10,9 +10,9 @@ public class Application {
     private UserManager userManager;
 
     @Inject
-    Application(HolidayCalculator holidayCalculator, UserGateway userGateway) {
-        this.holidayCalculator = holidayCalculator;
+    Application(UserGateway userGateway) {
         this.userGateway = userGateway;
+        this.holidayCalculator = new JollydayHolidayCalculator();
         this.userManager = new UserManager(userGateway);
     }
 
