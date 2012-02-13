@@ -80,4 +80,14 @@ public class JollydayHolidayCalculatorTest {
         Period period = new Period(BETWEEN_YEARS_START, BETWEEN_YEARS_END);
         assertEquals(13.0, holidayCalculator.calculateWorkingDays(period));
     }
+
+    @Test
+    public void testHolidaysForBavariaIn2012() throws Exception {
+        assertEquals(13, holidayCalculator.getHolidaysFor(2012).size());
+    }
+
+    @Test
+    public void testHalfDayHolidaysForLa2() throws Exception {
+        assertEquals(2, holidayCalculator.getHalfDayHolidaysFor(2012).size());
+    }
 }
