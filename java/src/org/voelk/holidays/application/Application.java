@@ -8,10 +8,12 @@ public class Application {
     private HolidayCalculator holidayCalculator;
     private UserGateway userGateway;
     private UserManager userManager;
+    private static VacationRequestGateway vacationRequestGateway;
 
     @Inject
-    Application(UserGateway userGateway) {
+    Application(UserGateway userGateway, VacationRequestGateway vacationRequestGateway) {
         this.userGateway = userGateway;
+        Application.vacationRequestGateway = vacationRequestGateway;
         this.holidayCalculator = new JollydayHolidayCalculator();
         this.userManager = new UserManager(userGateway);
     }
@@ -26,5 +28,9 @@ public class Application {
 
     public UserManager getUserManager() {
         return userManager;
+    }
+
+    public static VacationRequestGateway getVacationRequestGateway() {
+        return vacationRequestGateway;
     }
 }

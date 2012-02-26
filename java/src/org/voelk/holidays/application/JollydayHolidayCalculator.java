@@ -18,7 +18,7 @@ public class JollydayHolidayCalculator implements HolidayCalculator {
     }
 
     @Override
-    public double calculateWorkingDays(Period period) {
+    public double calculateWorkingDays(org.voelk.holidays.entities.Period period) {
         LocalDate gregorianStart = CalendarUtil.convertToGregorianDate(new LocalDate(period.getFrom()));
         LocalDate gregorianEnd = CalendarUtil.convertToGregorianDate(new LocalDate(period.getTo()));
         double nonWorkDays = numberOfNonWorkdays(gregorianStart, gregorianEnd);

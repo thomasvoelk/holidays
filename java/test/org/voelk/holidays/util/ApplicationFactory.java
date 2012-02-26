@@ -17,6 +17,7 @@ public class ApplicationFactory {
         protected void configure() {
             bind(HolidayCalculator.class).to(JollydayHolidayCalculator.class);
             bind(UserGateway.class).to(InMemoryUserGateway.class);
+            bind(VacationRequestGateway.class).to(InMemoryVacationRequestGateway.class);
         }
     }
 }

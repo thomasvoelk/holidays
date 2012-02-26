@@ -24,4 +24,9 @@ public class ApplicationTest {
         assertNotNull(application.getUserGateway());
     }
 
+    @Test
+    public void testVacationRequestGatewayNotNull() {
+        assertNotNull(Application.getVacationRequestGateway());
+    }
+
 }

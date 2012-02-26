@@ -1,4 +1,4 @@
-package org.voelk.holidays.application;
+package org.voelk.holidays.entities;
 
 import java.util.*;
 
